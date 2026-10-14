@@ -92,7 +92,7 @@ Il percorso tipico di un utente, dall'iscrizione alle statistiche.
 
 ### 1. Registrazione e accesso
 
-L'utente crea un account con nickname, email e password e accede alla propria **area personale**. Senza accesso è possibile solo consultare i profili e le recensioni pubbliche: libreria, avanzamento, statistiche e backup richiedono di essere autenticati.
+L'utente crea un account con nickname, email e password e accede alla propria **area personale**. Senza accesso è possibile cercare nel catalogo, consultare i profili e le recensioni pubbliche: libreria, avanzamento, statistiche e backup richiedono di essere autenticati.
 
 ### 2. Ricerca nel catalogo
 
