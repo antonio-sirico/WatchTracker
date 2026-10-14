@@ -1,0 +1,303 @@
+P {
+	MARGIN: 10px 0px 4px
+}
+.bkg {
+	BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif)
+}
+.color1 {
+	BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif)
+}
+.color3 {
+	BACKGROUND-COLOR: #ffffff
+}
+.logo {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+TD.leftheader {
+	BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif); WIDTH: 20%; TEXT-ALIGN: left
+}
+TD.centerheader {
+	FONT-SIZE: large; BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif); FONT-FAMILY: sans-serif; TEXT-ALIGN: center
+}
+TD.smallheader {
+	FONT-SIZE: small; BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif); FONT-FAMILY: sans-serif
+}
+TD.rightheader {
+	BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/include/bkg.gif); WIDTH: 20%; TEXT-ALIGN: right
+}
+A {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #083a6d
+}
+A:visited {
+	COLOR: #386da2
+}
+A:hover {
+	COLOR: #245789
+}
+A:active {
+	COLOR: #245789; TEXT-DECORATION: underline
+}
+A:unknown {
+	COLOR: #245789
+}
+HTML {
+	FONT-SIZE: 12px; COLOR: #000; FONT-FAMILY: sans-serif
+}
+BODY {
+	FONT-SIZE: 12px; COLOR: #000; FONT-FAMILY: sans-serif
+}
+H3.navhead {
+	FONT-SIZE: 100%
+}
+.main P {
+	TEXT-INDENT: 17px
+}
+.center {
+	TEXT-ALIGN: center
+}
+#logo {
+	TEXT-ALIGN: center
+}
+#slogan {
+	TEXT-ALIGN: center
+}
+#slogan {
+	MARGIN-TOP: -5px; FONT-FAMILY: Times, "Times New Roman", serif
+}
+.headline {
+	BACKGROUND: #fff; COLOR: #900
+}
+.hide {
+	DISPLAY: none
+}
+.slogan {
+	FONT-STYLE: italic
+}
+.date {
+	FONT-STYLE: italic
+}
+.archive {
+	FONT-SIZE: small
+}
+DIV.banner {
+	FONT-SIZE: small; BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/images/pictures/banner.gif); MARGIN-LEFT: 1px; BORDER-TOP-STYLE: none; MARGIN-RIGHT: 1px; FONT-FAMILY: sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; TEXT-ALIGN: left; BORDER-BOTTOM-STYLE: none
+}
+DIV.copyright {
+	FONT-SIZE: 11px; BACKGROUND-IMAGE: url(http://wwwbruegge.in.tum.de/images/pictures/banner.gif); PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; BORDER-TOP-STYLE: none; MARGIN-RIGHT: 0px; FONT-FAMILY: sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 21px; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+#compliance {
+	TEXT-ALIGN: right
+}
+
+@media Print    
+{
+H1 {
+	page-break-inside: avoid
+}
+H2 {
+	page-break-inside: avoid
+}
+H3 {
+	page-break-inside: avoid
+}
+H4 {
+	page-break-inside: avoid
+}
+H5 {
+	page-break-inside: avoid
+}
+H6 {
+	page-break-inside: avoid
+}
+BLOCKQUOTE {
+	page-break-inside: avoid
+}
+PRE {
+	page-break-inside: avoid
+}
+UL {
+	
+}
+OL {
+	
+}
+DL {
+	
+}
+A.bannerLink {
+	FONT-WEIGHT: normal
+}
+
+}
+
+@media Aural    
+{
+H1 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H2 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H3 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H4 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H5 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H6 {
+	voice-family: paul, male; stress: 20; richness: 90
+}
+H1 {
+	pitch: x-low; pitch-range: 90
+}
+H2 {
+	pitch: x-low; pitch-range: 80
+}
+H3 {
+	pitch: low; pitch-range: 70
+}
+H4 {
+	pitch: medium; pitch-range: 60
+}
+H5 {
+	pitch: medium; pitch-range: 50
+}
+H6 {
+	pitch: medium; pitch-range: 40
+}
+LI {
+	richness: 60; pitch: medium
+}
+DT {
+	richness: 60; pitch: medium
+}
+DD {
+	richness: 60; pitch: medium
+}
+DT {
+	stress: 80
+}
+PRE {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+CODE {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+TT {
+	stress: 0; richness: 80; pitch: medium; pitch-range: 0
+}
+EM {
+	stress: 60; richness: 50; pitch: medium; pitch-range: 60
+}
+STRONG {
+	stress: 90; richness: 90; pitch: medium; pitch-range: 60
+}
+DFN {
+	stress: 60; pitch: high; pitch-range: 60
+}
+S {
+	richness: 0
+}
+STRIKE {
+	richness: 0
+}
+I {
+	stress: 60; richness: 50; pitch: medium; pitch-range: 60
+}
+B {
+	stress: 90; richness: 90; pitch: medium; pitch-range: 60
+}
+U {
+	richness: 0
+}
+A:link {
+	voice-family: harry, male
+}
+A:visited {
+	voice-family: betty, female
+}
+A:active {
+	voice-family: betty, female; pitch: x-high; pitch-range: 80
+}
+    }
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: sans-serif
+}
+TH {
+	FONT-SIZE: 12px; FONT-FAMILY: sans-serif
+}
+.title20 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; FONT-FAMILY: sans-serif
+}
+.title18 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; FONT-FAMILY: sans-serif
+}
+.head18 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; LINE-HEIGHT: 140%; FONT-FAMILY: sans-serif
+}
+.head16 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; LINE-HEIGHT: 140%; FONT-FAMILY: sans-serif
+}
+.head14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 140%; FONT-FAMILY: sans-serif
+}
+.menue18 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px
+}
+.menue16 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px
+}
+.menue14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.flatt14 {
+	FONT-SIZE: 14px
+}
+.flatt12 {
+	FONT-SIZE: 12px
+}
+.flatt10 {
+	FONT-SIZE: 11px
+}
+.block14 {
+	FONT-SIZE: 14px; FONT-FAMILY: sans-serif; TEXT-ALIGN: justify
+}
+.block12 {
+	FONT-SIZE: 12px; FONT-FAMILY: sans-serif; TEXT-ALIGN: justify
+}
+.block10 {
+	FONT-SIZE: 12px; FONT-FAMILY: sans-serif
+}
+.flattsperr14 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 140%
+}
+.flattsperr12 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 140%
+}
+.flattsperr10 {
+	FONT-SIZE: 10px; LINE-HEIGHT: 140%
+}
+.blocksperr14 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 140%; TEXT-ALIGN: justify
+}
+.blocksperr12 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 140%; TEXT-ALIGN: justify
+}
+.blocksperr10 {
+	FONT-SIZE: 10px; LINE-HEIGHT: 140%; TEXT-ALIGN: justify
+}
+.pfad1 {
+	FONT-SIZE: 12px
+}
+.fusszeile1 {
+	FONT-SIZE: 12px
+}
+.hidden1 {
+	FONT-SIZE: 2px
+}
