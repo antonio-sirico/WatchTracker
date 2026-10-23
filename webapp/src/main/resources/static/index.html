@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WatchTracker</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/antonio-sirico/WatchTracker/main/assets/logo_no_background.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-view="search">
+      <img class="brand-logo" src="https://raw.githubusercontent.com/antonio-sirico/WatchTracker/main/assets/logo_no_background.png" alt="">
+      <span class="brand-name">Watch<strong>Tracker</strong></span>
+    </a>
+    <nav class="nav">
+      <button class="nav-link" data-view="search">Cerca</button>
+      <button class="nav-link" data-view="library" data-needs-auth>La mia libreria</button>
+    </nav>
+    <div class="session" id="session">
+    </div>
+  </header>
+
+  <main>
+    <section id="view-search" class="view">
+      <form id="search-form" class="search" autocomplete="off">
+        <input id="search-input" type="search" placeholder="Cerca un film, una serie TV o un anime..." required minlength="1">
+        <button type="submit">Cerca</button>
+      </form>
+      <div id="search-warnings" class="warnings"></div>
+      <p id="search-status" class="muted"></p>
+      <div id="results" class="grid"></div>
+    </section>
+
+    <section id="view-library" class="view hidden">
+      <div class="view-head">
+        <h1>La mia libreria</h1>
+        <label class="filter">Stato
+          <select id="library-filter">
+            <option value="">Tutti</option>
+            <option value="DA_VEDERE">Da vedere</option>
+            <option value="IN_CORSO">In corso</option>
+            <option value="COMPLETATO">Completato</option>
+            <option value="ABBANDONATO">Abbandonato</option>
+          </select>
+        </label>
+      </div>
+      <p id="library-status" class="muted"></p>
+      <div id="library" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>WatchTracker &middot; progetto didattico del corso di Ingegneria del Software, Universit&agrave; degli Studi di Salerno.</p>
+    <p>Dati su film e serie TV forniti da <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>.
+      This product uses the TMDB API but is not endorsed or certified by TMDB.
+      Dati sugli anime da <a href="https://myanimelist.net/" target="_blank" rel="noopener">MyAnimeList</a> tramite <a href="https://jikan.moe/" target="_blank" rel="noopener">Jikan</a>.</p>
+  </footer>
+
+  <dialog id="detail">
+    <button class="close" data-close aria-label="Chiudi">&times;</button>
+    <div id="detail-body" class="detail"></div>
+  </dialog>
+
+  <dialog id="auth">
+    <button class="close" data-close aria-label="Chiudi">&times;</button>
+    <div class="auth-head">
+      <img src="https://raw.githubusercontent.com/antonio-sirico/WatchTracker/main/assets/logo_no_background.png" alt="">
+      <span class="brand-name">Watch<strong>Tracker</strong></span>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Accedi</button>
+      <button class="tab" data-tab="register">Registrati</button>
+    </div>
+    <form id="login-form" class="auth-form">
+      <label>Nickname <input name="nickname" required autocomplete="username"></label>
+      <label>Password <input name="password" type="password" required autocomplete="current-password"></label>
+      <p class="error" data-error></p>
+      <button type="submit">Accedi</button>
+    </form>
+    <form id="register-form" class="auth-form hidden">
+      <label>Nickname <input name="nickname" required minlength="3" maxlength="20" pattern="[A-Za-z0-9._]+" autocomplete="username">
+        <small>Da 3 a 20 caratteri: lettere, numeri, punto e trattino basso</small></label>
+      <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+      <label>Password <input name="password" type="password" required minlength="8" autocomplete="new-password">
+        <small>Almeno 8 caratteri con una lettera e un numero</small></label>
+      <p class="error" data-error></p>
+      <button type="submit">Crea account</button>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
