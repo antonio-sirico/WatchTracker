@@ -24,9 +24,16 @@ Il file viene cercato nella cartella da cui si avvia l'applicazione, cioè `weba
 
 ## Avvio
 
+**Windows, via doppio clic:** `webapp/avvia.bat`. Controlla che `JAVA_HOME` punti a un JDK 17+, poi lancia
+`mvnw.cmd spring-boot:run`; se qualcosa va storto la finestra resta aperta con il messaggio d'errore.
+
+Da terminale, dentro `webapp/`:
+
 ```bash
-# Windows
+# Windows (cmd)
 mvnw.cmd spring-boot:run
+# Windows (PowerShell): serve il prefisso .\
+.\mvnw.cmd spring-boot:run
 
 # macOS / Linux
 ./mvnw spring-boot:run
