@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 
-/** Timeout verso i cataloghi esterni. */
+/** RNF-R12: le richieste ai cataloghi esterni sono abbandonate dopo 5 secondi senza risposta. */
 @Configuration
 public class HttpClientConfig {
 
@@ -15,7 +15,7 @@ public class HttpClientConfig {
         return builder -> {
             SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
             factory.setConnectTimeout(Duration.ofSeconds(5));
-            factory.setReadTimeout(Duration.ofSeconds(10));
+            factory.setReadTimeout(Duration.ofSeconds(5));
             builder.requestFactory(factory);
         };
     }

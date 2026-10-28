@@ -241,9 +241,9 @@ WatchTracker interroga entrambi i cataloghi, unisce i risultati in un'unica list
 
 ## 🚧 Stato del progetto
 
-WatchTracker è un progetto universitario per il corso di **Ingegneria del Software** dell'**Università degli Studi di Salerno**, anno accademico 2026/2027. Al momento si trova nella fase di **proposta e analisi**: questo README è l'estensione descrittiva della proposta di progetto.
+WatchTracker è un progetto universitario per il corso di **Ingegneria del Software** dell'**Università degli Studi di Salerno**, anno accademico 2026/2027. Il Problem Statement e il Requirements Analysis Document sono nelle cartelle `Deliverables` e `Semilavorati`; questo README è l'estensione descrittiva della proposta di progetto.
 
-L'applicazione non è ancora pubblicata online: le istruzioni per provarla verranno aggiunte man mano che il progetto avanza.
+Nella cartella [`webapp`](webapp/README.md) c'è il prototipo dell'applicazione (Spring Boot + HTML/CSS/JavaScript), che realizza le aree personali del RAD: account e visibilità del profilo, ricerca unificata, libreria con avanzamento per episodio e stagione, rating e recensioni, dashboard, profilo pubblico e backup. Community, gruppi di visione, moderazione e amministrazione sono descritti nei documenti ma non ancora implementati. L'applicazione non è pubblicata online: le istruzioni per avviarla in locale sono nel README della webapp.
 
 <div align="center">
 <br>

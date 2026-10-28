@@ -23,6 +23,7 @@ public class AuthController {
         this.currentUser = currentUser;
     }
 
+    /** UC-01: registrazione. L'account nasce con libreria vuota e profilo privato. */
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     public UserDto register(@Valid @RequestBody RegisterRequest request, HttpSession session) {
@@ -31,6 +32,7 @@ public class AuthController {
         return UserDto.from(user);
     }
 
+    /** UC-02: accesso. */
     @PostMapping("/login")
     public UserDto login(@Valid @RequestBody LoginRequest request, HttpSession session) {
         User user = users.authenticate(request.nickname(), request.password());
@@ -38,6 +40,7 @@ public class AuthController {
         return UserDto.from(user);
     }
 
+    /** UC-02 passo 5: disconnessione. */
     @PostMapping("/logout")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void logout(HttpSession session) {
@@ -49,11 +52,10 @@ public class AuthController {
         return UserDto.from(currentUser.require(session));
     }
 
-    public record VisibilityRequest(boolean publicProfile) {}
-
+    /** UC-04: visibilità del profilo e sezioni condivise (RF 1.4, RF 4.1, RF 4.4). */
     @PatchMapping("/me/visibility")
     public UserDto visibility(@RequestBody VisibilityRequest request, HttpSession session) {
         User user = currentUser.require(session);
-        return UserDto.from(users.setPublicProfile(user, request.publicProfile()));
+        return UserDto.from(users.setVisibility(user, request));
     }
 }

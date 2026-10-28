@@ -1,6 +1,8 @@
 package it.watchtracker.catalog;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 /** Letture tolleranti dai JSON dei cataloghi. */
 final class JsonSupport {
@@ -31,6 +33,18 @@ final class JsonSupport {
         try {
             return Integer.parseInt(isoDate.substring(0, 4));
         } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
+    /** Converte una data ISO (es. "2019-04-06") in LocalDate, null se assente o non valida. */
+    static LocalDate localDate(String isoDate) {
+        if (isoDate == null || isoDate.length() < 10) {
+            return null;
+        }
+        try {
+            return LocalDate.parse(isoDate.substring(0, 10));
+        } catch (DateTimeParseException e) {
             return null;
         }
     }

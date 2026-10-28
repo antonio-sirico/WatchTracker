@@ -2,6 +2,7 @@ package it.watchtracker.user;
 
 import it.watchtracker.common.ApiException;
 import jakarta.servlet.http.HttpSession;
+import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
@@ -23,10 +24,19 @@ public class CurrentUser {
 
     /** RF 0.7: le operazioni riservate richiedono un utente autenticato. */
     public User require(HttpSession session) {
+        return find(session).orElseThrow(() -> new ApiException(HttpStatus.UNAUTHORIZED, "Accesso richiesto"));
+    }
+
+    /** Utente autenticato, se presente: per le pagine consultabili anche dal visitatore. */
+    public Optional<User> find(HttpSession session) {
         Object id = session.getAttribute(SESSION_KEY);
         if (!(id instanceof Long userId)) {
-            throw new ApiException(HttpStatus.UNAUTHORIZED, "Accesso richiesto");
+            return Optional.empty();
         }
-        return users.require(userId);
+        try {
+            return Optional.of(users.require(userId));
+        } catch (ApiException e) {
+            return Optional.empty();
+        }
     }
 }

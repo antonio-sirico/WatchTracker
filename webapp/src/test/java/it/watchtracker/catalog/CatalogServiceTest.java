@@ -1,7 +1,9 @@
 package it.watchtracker.catalog;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import it.watchtracker.common.ApiException;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
@@ -62,5 +64,16 @@ class CatalogServiceTest {
         assertThat(JikanClient.episodeMinutes("1 hr 55 min")).isEqualTo(115);
         assertThat(JikanClient.episodeMinutes("Unknown")).isNull();
         assertThat(JikanClient.episodeMinutes(null)).isNull();
+    }
+
+    @Test
+    void uc06_searchTextMustHaveAtLeastTwoCharacters() {
+        assertThatThrownBy(() -> service.search("a"))
+                .isInstanceOf(ApiException.class)
+                .hasMessage(CatalogService.QUERY_ERROR)
+                .extracting(e -> ((ApiException) e).getFields().get("q"))
+                .isEqualTo(CatalogService.QUERY_ERROR);
+        assertThatThrownBy(() -> service.search("x".repeat(101))).isInstanceOf(ApiException.class);
+        assertThatThrownBy(() -> service.search(null)).isInstanceOf(ApiException.class);
     }
 }
